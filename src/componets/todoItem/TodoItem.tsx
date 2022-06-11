@@ -3,6 +3,7 @@ import { ChangeEvent } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { ChangeChecked } from '../../store/actionCreators/changeChecked/changeChecked';
+import { RemoveTodoList } from '../../store/actionCreators/removeTodoList/RemoveTodoList';
 
 import { TodoItemType } from './types';
 
@@ -13,6 +14,9 @@ export const TodoItem = (props: TodoItemType) => {
 
   const onCheckedCLick = (id: string, e: ChangeEvent<HTMLInputElement>) => {
     dispatch(ChangeChecked(id, e.currentTarget.checked));
+  };
+  const onDeleteClick = (ID: string) => {
+    dispatch(RemoveTodoList(ID));
   };
 
   return (
@@ -27,7 +31,9 @@ export const TodoItem = (props: TodoItemType) => {
             type="checkbox"
             checked={checked}
           />
-          <button type="button">X</button>
+          <button onClick={() => onDeleteClick(id)} type="button">
+            X
+          </button>
         </div>
       ))}
     </div>

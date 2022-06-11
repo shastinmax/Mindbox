@@ -10,5 +10,6 @@ export default function useInput(initialValue: string) {
   return {
     value,
     onChange,
+    setValue,
   };
 }

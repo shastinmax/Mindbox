@@ -15,7 +15,7 @@ export const Todolist = () => {
   const dispatch = useDispatch();
   const todoLists = useAppSelector(selectTodoList);
 
-  const { value, onChange } = useInput('');
+  const { value, onChange, setValue } = useInput('');
   const data: DataType = {
     id: v1(),
     filter: 'all',
@@ -25,6 +25,7 @@ export const Todolist = () => {
 
   const onAddTodoListClick = () => {
     dispatch(AddNewTodoList(data));
+    setValue('');
   };
   return (
     <div>
