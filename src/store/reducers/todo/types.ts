@@ -7,4 +7,5 @@ export type TodoListType = {
   id: string;
   filter: FilterType;
   taskTitle: string;
+  checked: boolean;
 };

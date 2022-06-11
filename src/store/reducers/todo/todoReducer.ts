@@ -19,9 +19,18 @@ export const todoReducer = (
             id: action.data.id,
             filter: action.data.filter,
             taskTitle: action.data.taskTitle,
+            checked: action.data.checked,
           },
           ...state.todoLists,
         ],
+      };
+    }
+    case 'TODO/CHANGE-CHECKED': {
+      return {
+        ...state,
+        todoLists: state.todoLists.map(todo =>
+          todo.id === action.id ? { ...todo, checked: action.value } : todo,
+        ),
       };
     }
     default:

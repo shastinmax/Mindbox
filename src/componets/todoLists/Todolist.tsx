@@ -6,11 +6,10 @@ import { v1 } from 'uuid';
 import { useAppSelector } from '../../hooks/useAppSelectorsHook';
 import useInput from '../../hooks/useInput';
 import { AddNewTodoList } from '../../store/actionCreators/addNewTodoList/addNewTodoList';
-import { TodoListType } from '../../store/reducers/todo/types';
 import { selectTodoList } from '../../store/selectors/todo';
 import { TodoItem } from '../todoItem/TodoItem';
 
-type DataType = TodoListType;
+import { DataType } from './types';
 
 export const Todolist = () => {
   const dispatch = useDispatch();
@@ -21,6 +20,7 @@ export const Todolist = () => {
     id: v1(),
     filter: 'all',
     taskTitle: value,
+    checked: false,
   };
 
   const onAddTodoListClick = () => {
