@@ -1,14 +1,29 @@
-import {InitialStateType} from './types';
+import { GlobalType } from '../types';
 
-const initialState = {
-  todoList: [],
+import { InitialStateType } from './types';
+
+const initialState: InitialStateType = {
+  todoLists: [],
 };
 
 export const todoReducer = (
   state: InitialStateType = initialState,
-  action: any,
+  action: GlobalType,
 ): InitialStateType => {
   switch (action.type) {
+    case 'TODO/ADD-NEW-TODO-LIST': {
+      return {
+        ...state,
+        todoLists: [
+          {
+            id: action.data.id,
+            filter: action.data.filter,
+            taskTitle: action.data.taskTitle,
+          },
+          ...state.todoLists,
+        ],
+      };
+    }
     default:
       return state;
   }

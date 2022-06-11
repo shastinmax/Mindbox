@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './App.scss';
-import { Todolist } from './componets/Todolist';
+import { Todolist } from './componets/todoLists/Todolist';
 
 export const App = () => (
   <div className="App">
