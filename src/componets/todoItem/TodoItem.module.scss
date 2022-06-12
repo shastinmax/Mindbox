@@ -1,0 +1,12 @@
+.inner {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.error {
+    border: red 1px solid;
+}
+
