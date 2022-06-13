@@ -1,3 +1,34 @@
+@import 'src/index';
+.wrapper {
+    position: relative;
+}
+
 .errorMessage {
-    color: red;
+    color: $button-color-red;
+    position: absolute;
+    left: 10px;
+    top: 90px;
+}
+
+.inner {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.input {
+    max-width: 350px;
+    width: 100%;
+    border-radius: 10px;
+}
+.icon{
+    width: 50px;
+    cursor: pointer;
+}
+.header{
+    border-radius: 5px;
+    border: 2px solid #e6e7ee;
+    margin-bottom: 30px;
 }

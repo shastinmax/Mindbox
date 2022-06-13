@@ -1,12 +1,28 @@
+@import 'src/index';
 .inner {
     max-width: 500px;
-    margin: 0 auto;
+    margin: 10px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 5px;
+    border: 2px solid #e6e7ee;
+    padding: 10px;
+    &:hover{
+        border: 2px solid $clr;
+        box-shadow: 2px 2px 9px rgba(0, 0, 0, .25);
+        color: #63a4dc;
+    }
 }
 
 .error {
-    border: red 1px solid;
+    border:  1px solid $button-color-red;
 }
-
+.button_wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.icon{
+    width: 50px;
+    cursor: pointer;
+}

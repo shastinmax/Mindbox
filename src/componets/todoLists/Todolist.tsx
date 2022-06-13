@@ -13,6 +13,8 @@ import { TodoItem } from '../todoItem/TodoItem';
 import style from './Todolist.module.scss';
 import { DataType } from './types';
 
+import AddTodo from 'assets/icon/add-svgrepo-com.svg';
+
 const ENTERCHARCODE = 13;
 
 export const Todolist = () => {
@@ -59,18 +61,29 @@ export const Todolist = () => {
 
   return (
     <div className={style.wrapper}>
-      <h3>todos</h3>
+      <div className={style.header}>
+        <h3 className={style.title}>My TODO list</h3>
 
-      <input
-        type="text"
-        value={value}
-        onChange={onChange}
-        onKeyPress={onKeyPressHandler}
-      />
-      <button onClick={onAddTodoListClick} type="button">
-        +
-      </button>
-      {error && <div className={style.errorMessage}>{error}</div>}
+        <div className={style.inner}>
+          <input
+            type="text"
+            value={value}
+            onChange={onChange}
+            onKeyPress={onKeyPressHandler}
+            placeholder="add new todo..."
+            className={style.input}
+          />
+          <img
+            onClick={onAddTodoListClick}
+            className={style.icon}
+            role="presentation"
+            src={AddTodo}
+            alt="addTodo"
+          />
+        </div>
+
+        {error && <div className={style.errorMessage}>{error}</div>}
+      </div>
 
       <TodoItem todoLists={todoLists} changeFilter={changeFilter} />
     </div>

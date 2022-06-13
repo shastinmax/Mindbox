@@ -33,7 +33,7 @@ export const todoReducer = (
         ),
       };
     }
-    case 'TODO:REMOVE-TODO-LIST': {
+    case 'TODO/REMOVE-TODO-LIST': {
       return {
         ...state,
         todoLists: state.todoLists.filter(todo => todo.id !== action.id),
