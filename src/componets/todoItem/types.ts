@@ -1,6 +1,5 @@
-import { FilterType, TodoListType } from '../../store/reducers/todo/types';
+import { TodoListType } from '../../store/reducers/todo/types';
 
-export type TodoItemType = {
+export type TodoType = {
   todoLists: TodoListType[];
-  changeFilter: (filterValue: FilterType) => void;
 };

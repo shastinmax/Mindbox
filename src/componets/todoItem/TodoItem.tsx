@@ -1,28 +1,16 @@
-import { Button } from '../common/button/Button';
-import { Todo } from '../Todo/Todo';
+import React from 'react';
 
-import style from './TodoItem.module.scss';
-import { TodoItemType } from './types';
+import { Todo } from '../todo/Todo';
 
-export const TodoItem = (props: TodoItemType) => {
-  const { todoLists, changeFilter } = props;
+import { TodoType } from './types';
 
-  const onAllClickHandler = () => changeFilter('all');
-  const onActiveClickHandler = () => changeFilter('active');
-  const onCompletedClickHandler = () => changeFilter('completed');
-
+export const TodoItem = (props: TodoType) => {
+  const { todoLists } = props;
   return (
     <div>
-      <div className={style.button_wrapper}>
-        <Button title="All" className="btn btn_green" callback={onAllClickHandler} />
-        <Button title="Active" className="btn" callback={onActiveClickHandler} />
-        <Button
-          title="Completed"
-          className="btn btn_red"
-          callback={onCompletedClickHandler}
-        />
-      </div>
-      <Todo todoLists={todoLists} />
+      {todoLists.map(({ id, taskTitle, checked }) => (
+        <Todo key={id} id={id} taskTitle={taskTitle} checked={checked} />
+      ))}
     </div>
   );
 };

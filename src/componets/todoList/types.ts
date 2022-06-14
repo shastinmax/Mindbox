@@ -1,5 +1,5 @@
 import { TodoListType } from '../../store/reducers/todo/types';
 
-export type TodoType = {
+export type TodoItemType = {
   todoLists: TodoListType[];
 };

@@ -1,0 +1,30 @@
+@import 'src/index';
+.wrapper {
+    position: relative;
+}
+
+.errorMessage {
+    color: $button-color-red;
+    position: absolute;
+    left: 10px;
+    top: 90px;
+}
+
+.header{
+    border-radius: 5px;
+    border: 2px solid #e6e7ee;
+    margin-bottom: 30px;
+}
+.button_wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.allActive{
+    box-shadow: 0 0 35px $button-color-green;
+}
+.active{
+    box-shadow: 0 0 35px $clr;
+}
+.completedActive{
+    box-shadow: 0 0 35px $button-color-red;
+}
