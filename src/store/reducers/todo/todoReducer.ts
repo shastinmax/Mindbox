@@ -12,7 +12,7 @@ export const todoReducer = (
 ): InitialStateType => {
   switch (action.type) {
     case 'TODO/ADD-NEW-TODO-LIST': {
-      return {
+      return <InitialStateType>{
         ...state,
         todoLists: [
           {
