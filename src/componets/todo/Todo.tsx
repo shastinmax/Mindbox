@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import Delete from '../../assets/icon/delete-svgrepo-com.svg';
 import { ChangeChecked } from '../../store/actionCreators/changeChecked/changeChecked';
 import { RemoveTodoList } from '../../store/actionCreators/removeTodoList/removeTodoList';
-import { fixLengthText } from '../../utils/fixLengthText';
+import { fixLengthText } from '../../utils/fixLengthText/fixLengthText';
 import style from '../todoList/TodoList.module.scss';
 
 import { TodoPropsType } from './types';

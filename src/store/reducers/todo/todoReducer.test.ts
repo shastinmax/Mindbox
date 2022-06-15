@@ -1,9 +1,9 @@
 import { AddNewTodoList } from '../../actionCreators/addNewTodoList/addNewTodoList';
 import { ChangeChecked } from '../../actionCreators/changeChecked/changeChecked';
+import { RemoveTodoList } from '../../actionCreators/removeTodoList/removeTodoList';
 
 import { todoReducer } from './todoReducer';
 import { InitialStateType } from './types';
-import { RemoveTodoList } from '../../actionCreators/removeTodoList/removeTodoList';
 
 const state: InitialStateType = {
   todoLists: [

@@ -17,5 +17,3 @@ export const App = () => (
     <TodoListContainer />
   </div>
 );
-
-export default App;

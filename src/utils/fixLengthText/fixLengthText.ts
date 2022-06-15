@@ -1,4 +1,4 @@
-const MAX_TEXT_LENGTH = 30;
+const MAX_TEXT_LENGTH = 10;
 const MIN_TEXT_LENGTH = 0;
 
 export const fixLengthText = (text: string) => {
