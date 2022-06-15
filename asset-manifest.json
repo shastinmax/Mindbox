@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Mindbox/static/css/main.bbeb21ee.css",
+    "main.js": "/Mindbox/static/js/main.6aadbd9f.js",
+    "static/js/787.2f3f44a9.chunk.js": "/Mindbox/static/js/787.2f3f44a9.chunk.js",
+    "static/media/delete-svgrepo-com.svg": "/Mindbox/static/media/delete-svgrepo-com.f38d9785a3301e6c14673bf9b6ac83b4.svg",
+    "static/media/add-svgrepo-com.svg": "/Mindbox/static/media/add-svgrepo-com.c72af1013e862310da159898da452d91.svg",
+    "index.html": "/Mindbox/index.html",
+    "main.bbeb21ee.css.map": "/Mindbox/static/css/main.bbeb21ee.css.map",
+    "main.6aadbd9f.js.map": "/Mindbox/static/js/main.6aadbd9f.js.map",
+    "787.2f3f44a9.chunk.js.map": "/Mindbox/static/js/787.2f3f44a9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bbeb21ee.css",
+    "static/js/main.6aadbd9f.js"
+  ]
+}
